@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a121c">
+<meta name="description" content="Documentación oficial de Kernnel Estudio musical: biblioteca, repertorios, compases, metrónomo, sesiones y respaldos.">
+<title>Kernnel Estudio musical — Guía oficial</title>
+<link rel="stylesheet" href="./styles.css">
+<script src="./guide.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#principal">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-content">
+    <a class="identity" href="#inicio" aria-label="Kernnel Estudio musical — Inicio">
+      <span class="identity-icon" aria-hidden="true">♫</span>
+      <span><strong>KERNNEL</strong><small>ESTUDIO MUSICAL · DOCUMENTACIÓN</small></span>
+    </a>
+    <nav class="header-links" aria-label="Navegación principal">
+      <a href="#funciones">Funciones</a><a href="#manual">Manual</a><a href="#procedimientos">Procedimientos</a><a href="#instalacion">Instalación</a>
+    </nav>
+    <a class="launch launch-small" href="https://osdrumm-sudo.github.io/kernnel-estudio-musical/" target="_blank" rel="noopener noreferrer">Abrir Kernnel <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="site-layout" id="inicio">
+  <aside class="side-nav" aria-label="Índice del documento">
+    <div class="side-label">CONTENIDO</div>
+    <a href="#introduccion">Descripción general</a>
+    <a href="#funciones">Áreas funcionales</a>
+    <a href="#manual">Manual de usuario</a>
+    <a href="#procedimientos">Procedimientos</a>
+    <a href="#instalacion">Instalación y almacenamiento</a>
+    <a href="#preguntas">Preguntas frecuentes</a>
+    <div class="side-note">Manual técnico · Edición inicial<br>Idioma: Español (es-CL)</div>
+  </aside>
+  <main id="principal">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow"><span class="pulse"></span> DOCUMENTACIÓN OFICIAL</div>
+      <h1 id="hero-title">Kernnel Estudio musical<br><em>Guía de operación y referencia funcional</em></h1>
+      <p class="lead">Procedimientos para la organización de repertorios, definición de estructuras musicales por compases, ejecución del metrónomo y registro de sesiones de práctica.</p>
+      <div class="hero-actions">
+        <a class="launch" href="#manual">Consultar manual <span aria-hidden="true">↓</span></a>
+        <a class="secondary-link" href="#procedimientos">Ver procedimientos</a>
+      </div>
+      <div class="meta-row"><span>Plataforma web instalable</span><span>Uso local sin conexión</span><span>Respaldos manuales con Firebase</span></div>
+    </section>
+    <section class="section" id="introduccion" aria-labelledby="intro-title">
+      <div class="section-number">01 / INTERFAZ</div>
+      <h2 id="intro-title">Entorno de trabajo</h2>
+      <p>La aplicación organiza la gestión musical mediante un panel de herramientas y un área principal de visualización de compases. En el modo de estudio, el panel lateral se oculta para ampliar la superficie de trabajo.</p>
+      <figure class="screenshot-frame">
+        <div class="screenshot-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>VISTA DE LA PLATAFORMA · DATOS DE DEMOSTRACIÓN</span></div>
+        <img src="./kernnel-ejemplo.jpg" alt="Captura real del área de trabajo de Kernnel, con la canción de demostración Ejemplo Ritmo base, metrónomo, cuatro compases por fila y anotaciones de pulsos." loading="eager" id="platform-shot">
+        <div class="shot-fallback" id="shot-fallback" hidden>La captura de demostración aún no está publicada en este repositorio. El recurso correspondiente es <code>kernnel-ejemplo.jpg</code>.</div>
+        <figcaption>Captura real de una versión de demostración de Kernnel. La distribución gráfica puede variar entre versiones.</figcaption>
+      </figure>
+      <div class="feature-grid" id="funciones">
+        <article class="feature"><span class="feature-icon">01</span><h3>Biblioteca y repertorios</h3><p>Consulta, filtrado y agrupación de canciones en repertorios.</p><a href="#biblioteca">Consultar función →</a></article>
+        <article class="feature"><span class="feature-icon">02</span><h3>Estructura por compases</h3><p>Definición de secciones, anotaciones y marcadores de dificultad.</p><a href="#compases">Consultar función →</a></article>
+        <article class="feature"><span class="feature-icon">03</span><h3>Metrónomo y audio</h3><p>Configuración de pulsación, métrica, intensidad y preparación.</p><a href="#metronomo">Consultar función →</a></article>
+        <article class="feature"><span class="feature-icon">04</span><h3>Práctica y sesiones</h3><p>Reproducción de intervalos, repetición y control de visualización.</p><a href="#practica">Consultar función →</a></article>
+      </div>
+    </section>
+    <section class="section" id="manual" aria-labelledby="manual-title">
+      <div class="section-number">02 / REFERENCIA</div>
+      <h2 id="manual-title">Manual de usuario</h2>
+      <p>Seleccione un módulo para consultar su finalidad operativa, parámetros disponibles y secuencia de utilización. Las instrucciones corresponden a funciones verificadas en el código de Kernnel.</p>
+      <label class="searchbox" for="manual-search"><span aria-hidden="true">⌕</span><input id="manual-search" type="search" autocomplete="off" placeholder="Buscar funciones, controles o procedimientos…" aria-describedby="search-count"></label>
+      <div class="search-count" id="search-count" aria-live="polite">8 módulos disponibles</div>
+      <div class="manual-list" id="manual-list">
+        <details class="manual-item" id="crear" data-search="crear canción título compases métrica nueva canción 256">
+          <summary><span class="manual-index">01</span><span><strong>Crear canción</strong><small>Registro inicial de un tema musical</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+          <div class="manual-body"><p>Permite generar una entrada de biblioteca con su denominación, cantidad inicial de compases y métrica.</p>
+          <ol><li>Expanda el módulo <b>Crear canción</b>.</li><li>Ingrese el <b>Título</b>.</li><li>Defina la cantidad de <b>Compases</b> (entre 1 y 256).</li><li>Seleccione la <b>Métrica</b> y confirme la creación.</li></ol>
+          <p class="technical">Las métricas admitidas son 2/4, 3/4, 4/4, 6/8, 9/8 y 12/8. La cantidad de compases puede modificarse posteriormente.</p></div>
+        </details>
+        <details class="manual-item" id="biblioteca" data-search="biblioteca repertorios buscar canción filtrar crear repertorio ordenar gestionar canciones">
+          <summary><span class="manual-index">02</span><span><strong>Biblioteca y repertorios</strong><small>Localización y organización de canciones</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+          <div class="manual-body"><p>Centraliza las canciones registradas y permite delimitar la consulta mediante un filtro de texto o repertorio.</p>
+          <ol><li>Expanda <b>Biblioteca y repertorios</b>.</li><li>Utilice <b>Buscar canción</b> para localizar un título.</li><li>Seleccione un valor en <b>Mostrar repertorio</b> cuando requiera restringir los resultados.</li><li>Seleccione la canción para cargar su estructura en el área principal.</li></ol>
+          <p class="technical">Los repertorios agrupan referencias a canciones de la biblioteca. Su organización es independiente de los compases de cada tema.</p></div>
+        </details>
+        <details class="manual-item" id="compases" data-search="canción compases notas pulsos imágenes color secciones marcadores difícil estructura métrica bpm original">
+          <summary><span class="manual-index">03</span><span><strong>Canción y compases</strong><small>Estructura musical, anotaciones y marcadores</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+          <div class="manual-body"><p>Permite modificar la métrica y el tempo de referencia, añadir o retirar compases y definir secciones identificadas mediante colores.</p>
+          <ol><li>Seleccione una canción de la biblioteca.</li><li>Abra <b>Canción y compases</b> para configurar la métrica y el <b>BPM original</b>.</li><li>Use el control de adición de compases cuando necesite ampliar la estructura.</li><li>En el área principal, introduzca nombres y anotaciones por compás.</li><li>Seleccione un pulso para asociar comentarios, colores o una imagen; marque los compases difíciles mediante el icono de estrella.</li></ol>
+          <p class="technical">La representación de pulsos no constituye un editor completo de notación musical convencional. La eliminación de un compás incorpora un registro recuperable a la papelera.</p></div>
+        </details>
+        <details class="manual-item" id="metronomo" data-search="metrónomo audio reproducir detener pausa bpm ritmo volumen sonido click percusión silencioso preparación compases">
+          <summary><span class="manual-index">04</span><span><strong>Metrónomo y audio</strong><small>Configuración y ejecución de pulsaciones</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+          <div class="manual-body"><p>Configura el metrónomo asociado a la canción seleccionada, con ajuste independiente de tempo de práctica, volumen y modalidad de sonido.</p>
+          <ol><li>Seleccione una canción y expanda <b>Metrónomo y audio</b>.</li><li>Establezca el <b>BPM de práctica</b> (30 a 300).</li><li>Seleccione el timbre: <b>Clic clásico</b>, <b>Percusión</b> o <b>Solo visual</b>.</li><li>Ajuste el volumen y los compases de preparación (0, 1, 2 o 4).</li><li>Active <b>Reproducir</b> en la barra de transporte. Utilice <b>Detener</b> para finalizar.</li></ol>
+          <p class="technical">El motor de audio utiliza Web Audio API. En 6/8, 9/8 y 12/8 se emite un pulso por corchea, con acento en el primer pulso de cada compás.</p></div>
+        </details>
+        <details class="manual-item" id="practica" data-search="práctica sesiones desde hasta compás intervalo bucle repetición zoom desplazamiento marcadores difíciles">
+          <summary><span class="manual-index">05</span><span><strong>Práctica y sesiones</strong><small>Delimitación de intervalos y seguimiento</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+          <div class="manual-body"><p>Define el segmento de la canción que será ejecutado por el metrónomo y administra opciones de seguimiento visual.</p>
+          <ol><li>Indique el <b>compás inicial</b> y el <b>compás final</b> del intervalo.</li><li>Active <b>Repetir este intervalo continuamente</b> si necesita reproducción cíclica.</li><li>Configure <b>Desplazamiento automático</b> y el nivel de <b>Zoom</b>.</li><li>Consulte los compases marcados como difíciles para acceder directamente a ellos.</li></ol>
+          <p class="technical">La opción «Usar canción completa» restablece el intervalo a la totalidad de compases.</p></div>
+        </details>
+        <details class="manual-item" id="apariencia" data-search="apariencia accesibilidad tema claro oscuro contraste botones controles pantalla encendida">
+          <summary><span class="manual-index">06</span><span><strong>Apariencia y accesibilidad</strong><small>Visualización y preferencias de interfaz</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+          <div class="manual-body"><p>Permite adaptar las condiciones de visualización a las necesidades del usuario y del dispositivo.</p>
+          <ol><li>Seleccione el <b>tema visual</b>: según el sistema, claro u oscuro.</li><li>Active <b>Alto contraste</b> si necesita mayor diferenciación de los elementos.</li><li>Active <b>Botones y controles más grandes</b> para aumentar la superficie de interacción.</li><li>Configure la opción de <b>mantener pantalla encendida</b> cuando el navegador sea compatible.</li></ol></div>
+        </details>
+        <details class="manual-item" id="respaldos" data-search="respaldos papelera exportar importar JSON copia local recuperar restaurar eliminar canción compás">
+          <summary><span class="manual-index">07</span><span><strong>Respaldos y papelera</strong><small>Exportación, importación y recuperación</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+          <div class="manual-body"><p>Permite generar un respaldo JSON completo, importar archivos compatibles, exportar elementos individuales y recuperar información eliminada.</p>
+          <ol><li>Abra <b>Respaldos y papelera</b>.</li><li>Seleccione <b>Exportar todo (JSON)</b> para generar una copia externa.</li><li>Compruebe que el archivo se haya descargado correctamente antes de efectuar cambios.</li><li>Utilice <b>Importar archivo JSON</b> y revise los datos detectados antes de confirmar una importación.</li></ol>
+          <p class="technical">El almacenamiento del navegador no sustituye un respaldo externo. Conserve una copia JSON independiente del dispositivo.</p></div>
+        </details>
+        <details class="manual-item" id="google" data-search="sincronización Google firebase firestore cuenta correo contraseña guardar copia recuperar restaurar manual nube">
+          <summary><span class="manual-index">08</span><span><strong>Sincronización Google</strong><small>Respaldo remoto mediante Firebase</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+          <div class="manual-body"><p>Permite autenticar una cuenta y transferir una copia manual de la biblioteca a Google Firestore.</p>
+          <ol><li>Conéctese a Internet y abra <b>Sincronización Google</b>.</li><li>Inicie sesión con su cuenta.</li><li>Seleccione <b>Guardar copia en Google</b> para almacenar la biblioteca del dispositivo.</li><li>En otro dispositivo, inicie sesión y seleccione <b>Recuperar desde Google</b> tras verificar el respaldo existente.</li></ol>
+          <p class="technical warning">La sincronización es manual y no fusiona modificaciones entre dispositivos. La recuperación puede reemplazar los datos locales. Exporte primero un respaldo JSON.</p></div>
+        </details>
+      </div>
+      <p class="empty-results" id="empty-results" hidden>No se encontraron módulos asociados a los términos ingresados.</p>
+    </section>
+    <section class="section" id="procedimientos">
+      <div class="section-number">03 / PROCEDIMIENTOS</div>
+      <h2>Procedimientos guiados</h2>
+      <div class="tutorial-grid">
+        <article class="tutorial"><span class="tutorial-tag">PROCEDIMIENTO 01</span><h3>Registrar la primera canción</h3><ol><li>Acceder al módulo Crear canción.</li><li>Registrar título, cantidad de compases y métrica.</li><li>Confirmar el registro.</li><li>Asignar nombres, anotaciones y secciones.</li></ol><a href="#crear">Referencia del módulo →</a></article>
+        <article class="tutorial"><span class="tutorial-tag">PROCEDIMIENTO 02</span><h3>Practicar un intervalo</h3><ol><li>Seleccionar una canción.</li><li>Configurar BPM de práctica.</li><li>Establecer los compases inicial y final.</li><li>Activar repetición e iniciar la reproducción.</li></ol><a href="#practica">Referencia del módulo →</a></article>
+        <article class="tutorial"><span class="tutorial-tag">PROCEDIMIENTO 03</span><h3>Preparar respaldo entre dispositivos</h3><ol><li>Exportar un respaldo JSON.</li><li>Autenticarse en Firebase.</li><li>Guardar la copia manual en Google.</li><li>Recuperar la copia en el segundo dispositivo, previa verificación.</li></ol><a href="#google">Referencia del módulo →</a></article>
+      </div>
+    </section>
+    <section class="section" id="instalacion">
+      <div class="section-number">04 / DESPLIEGUE</div><h2>Instalación y almacenamiento</h2>
+      <div class="info-columns">
+        <article class="info-panel"><h3>Ordenador</h3><p>Acceda a la aplicación mediante un navegador compatible. Utilice su opción de instalación de aplicaciones web cuando esté disponible.</p></article>
+        <article class="info-panel"><h3>iPad y iPhone</h3><p>Abra Kernnel en Safari, acceda a Compartir y utilice la opción de añadir a la pantalla de inicio.</p></article>
+        <article class="info-panel"><h3>Funcionamiento sin conexión</h3><p>Tras una instalación correcta y la descarga inicial de los recursos, las funciones locales pueden seguir operando sin red. La autenticación y los respaldos de Firebase requieren Internet.</p></article>
+      </div>
+      <p class="technical">La biblioteca local pertenece al almacenamiento del navegador y del origen web correspondiente. No elimine datos de navegación sin disponer de un respaldo verificable.</p>
+    </section>
+    <section class="section" id="preguntas">
+      <div class="section-number">05 / SOPORTE</div><h2>Preguntas frecuentes</h2>
+      <div class="faq">
+        <details><summary>¿Kernnel requiere conexión permanente?</summary><p>No. El metrónomo y las herramientas locales pueden funcionar sin Internet cuando los archivos están almacenados en el dispositivo. Firebase requiere conectividad.</p></details>
+        <details><summary>¿La biblioteca se sincroniza automáticamente?</summary><p>No. La transferencia mediante Google Firestore requiere operaciones manuales de guardar y recuperar.</p></details>
+        <details><summary>¿La representación de compases es una partitura convencional?</summary><p>No. Es una representación de pulsos, estructura y anotaciones. No sustituye un editor de notación musical completo.</p></details>
+        <details><summary>¿Qué precaución debo tomar antes de recuperar una copia?</summary><p>Exportar previamente un archivo JSON del dispositivo de destino y confirmar qué copia de la biblioteca es la más reciente.</p></details>
+      </div>
+    </section>
+    <footer><strong>Kernnel Estudio musical</strong><span>Guía oficial · Realizado por OSS/26</span><span>Documentación inicial en español · <a href="https://github.com/osdrumm-sudo/kernnel-guia-oficial" target="_blank" rel="noopener noreferrer">Repositorio de documentación</a></span></footer>
+  </main>
+</div>
+</body>
+</html>
