@@ -3,13 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0a121c">
+<meta name="theme-color" content="#e9ecef">
 <meta name="description" content="Documentación oficial de Kernnel Estudio musical: biblioteca, repertorios, compases, metrónomo, sesiones y respaldos.">
 <title>Kernnel Estudio musical — Guía oficial</title>
 <link rel="stylesheet" href="./styles.css">
 <script src="./guide.js" defer></script>
+<link rel="stylesheet" href="./design-theme.css">
+<link rel="stylesheet" href="./design-layout.css">
 </head>
 <body>
+<nav class="design-rail" aria-label="Accesos rápidos"><span class="rail-brand" aria-hidden="true">♫</span><a href="#inicio" aria-label="Inicio de la guía" title="Inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></svg></a><a href="#manual" aria-label="Manual de usuario" title="Manual"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h7l2 2 2-2h7v16h-7l-2 1-2-1H3zM12 6v15"/></svg></a><a href="https://osdrumm-sudo.github.io/kernnel-estudio-musical/" target="_blank" rel="noopener noreferrer" aria-label="Abrir aplicación" title="Abrir aplicación"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 7 9-4 9 4-9 4zM3 12l9 4 9-4M3 17l9 4 9-4"/></svg></a><button type="button" class="rail-settings" aria-label="Cambiar apariencia" title="Apariencia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></svg></button></nav>
 <a class="skip" href="#principal">Saltar al contenido</a>
 <header class="site-header">
   <div class="header-content">
@@ -20,6 +23,7 @@
     <nav class="header-links" aria-label="Navegación principal">
       <a href="#funciones">Funciones</a><a href="#manual">Manual</a><a href="#procedimientos">Procedimientos</a><a href="#instalacion">Instalación</a>
     </nav>
+    <div class="theme-tools" role="group" aria-label="Apariencia"><label for="design-theme">Tema</label><select id="design-theme"><option value="system">Según el sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select><button id="design-contrast" class="contrast-toggle" type="button" aria-pressed="false">Alto contraste</button></div>
     <a class="launch launch-small" href="https://osdrumm-sudo.github.io/kernnel-estudio-musical/" target="_blank" rel="noopener noreferrer">Abrir Kernnel <span aria-hidden="true">↗</span></a>
   </div>
 </header>
@@ -29,6 +33,10 @@
     <a href="#introduccion">Descripción general</a>
     <a href="#funciones">Áreas funcionales</a>
     <a href="#manual">Manual de usuario</a>
+    <a href="#navegacion">Inicio, Edición y Estudio</a>
+    <a href="#crear">Crear canción</a>
+    <a href="#biblioteca">Biblioteca y repertorios</a>
+    <a href="#metronomo">Metrónomo y audio</a>
     <a href="#procedimientos">Procedimientos</a>
     <a href="#instalacion">Instalación y almacenamiento</a>
     <a href="#preguntas">Preguntas frecuentes</a>
@@ -51,9 +59,9 @@
       <p>Kernnel 2.0 se abre en <b>Inicio</b>, con tarjetas de repertorios contraídas. La navegación superior permite alternar entre <b>Inicio</b>, <b>Edición</b> y <b>Estudio</b>. Abra una tarjeta y seleccione el nombre de una canción para estudiarla, o pulse <b>Editar</b> para modificarla. En Estudio, las herramientas se ocultan inicialmente para ampliar el área de compases.</p>
       <figure class="screenshot-frame">
         <div class="screenshot-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>VISTA DE LA PLATAFORMA · DATOS DE DEMOSTRACIÓN</span></div>
-        <img src="./kernnel-ejemplo.jpg" alt="Captura real del área de trabajo de Kernnel, con la canción de demostración Ejemplo Ritmo base, metrónomo, cuatro compases por fila y anotaciones de pulsos." loading="eager" id="platform-shot">
-        <div class="shot-fallback" id="shot-fallback" hidden>La captura de demostración aún no está publicada en este repositorio. El recurso correspondiente es <code>kernnel-ejemplo.jpg</code>.</div>
-        <figcaption>Captura de una versión anterior a Kernnel 2.0: ilustra los compases, pero no muestra la nueva pantalla Inicio ni la navegación actual. Consulte las instrucciones actualizadas de este manual.</figcaption>
+        <img src="./kernnel-interfaz-oscura.jpg" alt="Captura real de Inicio en modo oscuro: repertorios de demostración, navegación y controles de apariencia." loading="eager" id="platform-shot">
+        <div class="shot-fallback" id="shot-fallback" hidden>La captura de demostración aún no está publicada en este repositorio. El recurso correspondiente es <code>kernnel-interfaz-oscura.jpg</code>.</div>
+        <figcaption>Interfaz actual de Kernnel en modo oscuro, con datos de demostración. Cambie entre Claro, Oscuro y Según el sistema desde la cabecera.</figcaption>
       </figure>
       <div class="feature-grid" id="funciones">
         <article class="feature"><span class="feature-icon">01</span><h3>Biblioteca y repertorios</h3><p>Consulta, filtrado y agrupación de canciones en repertorios.</p><a href="#biblioteca">Consultar función →</a></article>
@@ -71,7 +79,7 @@
       <div class="manual-list" id="manual-list">
         <details class="manual-item" id="navegacion" data-search="inicio edición estudio navegación teléfono móvil ipad panel herramientas ajustes volver repertorio">
           <summary><span class="manual-index">01</span><span><strong>Inicio, Edición y Estudio</strong><small>Navegación y acceso a herramientas</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
-          <div class="manual-body"><ol><li>En <b>Inicio</b>, pulse el encabezado de un repertorio para desplegar o contraer sus canciones. También encontrará <b>Canciones sin repertorio</b>.</li><li>Pulse el nombre de una canción para entrar en <b>Estudio</b>, o <b>Editar</b> para entrar en <b>Edición</b>.</li><li>Use los botones superiores para cambiar de vista. Edición y Estudio requieren una canción seleccionada. Cambiar de vista detiene el metrónomo.</li><li>Desde Estudio, use <b>Modo edición</b> para modificar la canción o <b>Ir al repertorio</b> para regresar a Inicio con la tarjeta de origen abierta y la canción destacada.</li><li>En Edición o Estudio, use el botón de mostrar herramientas; en Estudio también puede usar <b>Ajustes</b>. En teléfono, despliegue <b>Herramientas y ajustes</b> cuando corresponda y abra el módulo deseado.</li></ol><p class="technical">Solo un módulo lateral permanece abierto a la vez. En teléfono, la navegación está arriba y los controles de reproducción se mantienen abajo en Edición y Estudio. Inicio reúne los repertorios y el formulario de creación.</p></div>
+          <div class="manual-body"><div class="view-cards"><div class="view-card"><strong>Inicio</strong><span>Organiza tus repertorios</span></div><div class="view-card"><strong>Edición</strong><span>Prepara tus compases</span></div><div class="view-card"><strong>Estudio</strong><span>Practica tu canción</span></div></div><ol><li>En <b>Inicio</b>, pulse el encabezado de un repertorio para desplegar o contraer sus canciones. También encontrará <b>Canciones sin repertorio</b>.</li><li>Pulse el nombre de una canción para entrar en <b>Estudio</b>, o <b>Editar</b> para entrar en <b>Edición</b>.</li><li>Use los botones superiores para cambiar de vista. Edición y Estudio requieren una canción seleccionada. Cambiar de vista detiene el metrónomo.</li><li>Desde Estudio, use <b>Modo edición</b> para modificar la canción o <b>Ir al repertorio</b> para regresar a Inicio con la tarjeta de origen abierta y la canción destacada.</li><li>En Edición o Estudio, use el botón de mostrar herramientas; en Estudio también puede usar <b>Ajustes</b>. En teléfono, despliegue <b>Herramientas y ajustes</b> cuando corresponda y abra el módulo deseado.</li></ol><p class="technical">Solo un módulo lateral permanece abierto a la vez. En teléfono, la navegación está arriba y los controles de reproducción se mantienen abajo en Edición y Estudio. Inicio reúne los repertorios y el formulario de creación.</p></div>
         </details>
         <details class="manual-item" id="crear" data-search="crear canción título compases métrica nueva canción 256">
           <summary><span class="manual-index">02</span><span><strong>Crear canción</strong><small>Registro inicial de un tema musical</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
@@ -106,7 +114,7 @@
         <details class="manual-item" id="apariencia" data-search="apariencia accesibilidad tema claro oscuro contraste botones controles pantalla encendida">
           <summary><span class="manual-index">07</span><span><strong>Apariencia y accesibilidad</strong><small>Visualización y preferencias de interfaz</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
           <div class="manual-body"><p>Permite adaptar las condiciones de visualización a las necesidades del usuario y del dispositivo.</p>
-          <ol><li>Seleccione el <b>tema visual</b>: según el sistema, claro u oscuro.</li><li>Active <b>Alto contraste</b> si necesita mayor diferenciación de los elementos.</li><li>Active <b>Botones y controles más grandes</b> para aumentar la superficie de interacción.</li><li>Configure la opción de <b>mantener pantalla encendida</b> cuando el navegador sea compatible.</li></ol></div>
+          <ol><li>Seleccione el <b>tema visual</b>: según el sistema, claro u oscuro. También puede cambiarlo desde el selector <b>Tema</b> de la cabecera, disponible tanto en la aplicación como en este manual.</li><li>Active <b>Alto contraste</b> si necesita bordes y textos más definidos. Es independiente del tema claro u oscuro y también está disponible en la cabecera. Cada sitio conserva su propia preferencia en este navegador.</li><li>Active <b>Botones y controles más grandes</b> para aumentar la superficie de interacción.</li><li>Configure la opción de <b>mantener pantalla encendida</b> cuando el navegador sea compatible.</li></ol></div>
         </details>
         <details class="manual-item" id="respaldos" data-search="respaldos papelera exportar importar JSON copia local recuperar restaurar eliminar canción compás">
           <summary><span class="manual-index">08</span><span><strong>Respaldos y papelera</strong><small>Exportación, importación y recuperación</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
@@ -157,5 +165,6 @@
     <footer><strong>Kernnel Estudio musical</strong><span>Guía oficial · Realizado por OSS/26</span><span>Manual de Kernnel 2.0 · Actualizado el 08/11/2026 · <a href="https://github.com/osdrumm-sudo/kernnel-guia-oficial" target="_blank" rel="noopener noreferrer">Repositorio de documentación</a></span></footer>
   </main>
 </div>
+<script src="./design-theme.js"></script>
 </body>
 </html>

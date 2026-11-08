@@ -23,7 +23,8 @@
   const image=document.getElementById("platform-shot");
   image.addEventListener("error",()=>{image.hidden=true;document.getElementById("shot-fallback").hidden=false});
   function openTarget(){
-    const id=decodeURIComponent(location.hash.slice(1));
+    let id;try{id=decodeURIComponent(location.hash.slice(1))}catch{return}
+    for(const link of document.querySelectorAll(".side-nav a")){const active=link.getAttribute("href")==="#"+id;link.classList.toggle("active",active);if(active)link.setAttribute("aria-current","location");else link.removeAttribute("aria-current")}
     const el=id?document.getElementById(id):null;
     if(el?.classList.contains("manual-item")){
       input.value="";
@@ -31,6 +32,7 @@
       empty.hidden=true;
       status.textContent=items.length+" módulos disponibles";
       el.open=true;
+      requestAnimationFrame(()=>el.scrollIntoView({block:"start"}));
     }
   }
   window.addEventListener("hashchange",openTarget);
