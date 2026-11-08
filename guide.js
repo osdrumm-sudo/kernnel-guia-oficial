@@ -9,7 +9,7 @@
     const q=normalize(input.value);
     let visible=0;
     for(const item of items){
-      const haystack=normalize(item.innerText+" "+(item.dataset.search||""));
+      const haystack=normalize(item.textContent+" "+(item.dataset.search||""));
       const show=!q||q.split(/\s+/).every(word=>haystack.includes(word));
       item.hidden=!show;
       if(show)visible++;
@@ -24,7 +24,7 @@
   image.addEventListener("error",()=>{image.hidden=true;document.getElementById("shot-fallback").hidden=false});
   function openTarget(){
     const id=decodeURIComponent(location.hash.slice(1));
-    const el=id&&document.getElementById(id);
+    const el=id?document.getElementById(id):null;
     if(el?.classList.contains("manual-item")){
       input.value="";
       for(const item of items)item.hidden=false;

@@ -3,16 +3,16 @@
 Sitio independiente de presentación, manual técnico y procedimientos de operación.
 Créditos de la aplicación: OSS/26.
 
-## Contenido inicial
+## Contenido — Kernnel 2.0
 - Página principal con identificación de la plataforma y acceso a la aplicación.
-- Manual de ocho módulos, con procedimientos y especificaciones verificadas sobre el código de Kernnel.
+- Manual de nueve módulos, con procedimientos y especificaciones verificadas sobre el código de Kernnel.
 - Buscador de módulos, navegación por secciones, procedimientos guiados, instalación y preguntas frecuentes.
 - Diseño adaptable a dispositivos móviles y escritorio, sin librerías ni servicios de terceros.
 - Idioma inicial: español de Chile (es-CL); arquitectura preparada para una localización futura.
 
 ## Publicación
 En Settings → Pages, seleccionar Deploy from a branch, rama main, directorio /(root).
-Dirección prevista: https://osdrumm-sudo.github.io/kernnel-guia-oficial/
+Dirección pública: https://kernnel.app/
 
 Repositorio independiente de la aplicación principal:
 https://osdrumm-sudo.github.io/kernnel-estudio-musical/
@@ -26,7 +26,7 @@ Esta imagen corresponde a una versión de demostración anterior; los controles 
 - index.html — contenido estructurado y semántico.
 - styles.css — identidad gráfica oscura y diseño adaptable.
 - guide.js — búsqueda local de módulos y navegación.
-- kernnel-ejemplo.jpg — captura de demostración, pendiente de carga.
+- kernnel-ejemplo.jpg — captura de demostración anterior a Kernnel 2.0, identificada como tal en el manual.
 
 ## Internacionalización futura
 Se utilizarán códigos BCP 47, inicialmente es-CL y posteriormente en-US. Los textos deberán externalizarse a archivos de idioma antes de incorporar el selector. La versión actual está exclusivamente en español y no incluye un selector de idioma simulado.
@@ -35,3 +35,10 @@ Se utilizarán códigos BCP 47, inicialmente es-CL y posteriormente en-US. Los t
 La documentación distingue la representación gráfica de pulsos de una partitura convencional y especifica que Firebase realiza respaldos manuales, no sincronización automática. La recuperación puede reemplazar la biblioteca local.
 
 Este proyecto no debe modificar el repositorio ni el almacenamiento de la aplicación principal.
+
+## Actualización del 8 de noviembre de 2026
+- Inicio, Edición y Estudio; navegación en teléfono y retorno al repertorio.
+- Creación de canción con uno, varios o ningún repertorio; repertorios nuevos guardados al confirmar.
+- Paneles laterales de apertura exclusiva y preguntas frecuentes de la nueva interfaz.
+- Búsqueda en contenido de módulos cerrados y corrección del inicio sin ancla URL.
+- Verificado: nueve módulos, enlaces internos, IDs únicos, sintaxis JS y búsqueda de acento, fusiona, repertorios y navegación. Pendiente: revisión visual de la guía en dispositivos reales.
