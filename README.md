@@ -12,10 +12,12 @@ Créditos de la aplicación: OSS/26.
 
 ## Publicación
 En Settings → Pages, seleccionar Deploy from a branch, rama main, directorio /(root).
-Dirección pública: https://kernnel.app/
+Dirección pública prevista tras la migración (NO ACTIVADA): https://manual.kernnel.app/
 
-Repositorio independiente de la aplicación principal:
-https://osdrumm-sudo.github.io/kernnel-estudio-musical/
+Repositorio independiente de la aplicación principal, con dirección prevista tras la migración:
+https://kernnel.app/
+
+Origen actual de la app hasta completar la migración: https://osdrumm-sudo.github.io/kernnel-estudio-musical/
 
 ## Captura auténtica de demostración
 La página requiere el archivo kernnel-ejemplo.jpg en la raíz del repositorio. Es una captura auténtica de Kernnel con el título Ejemplo · Ritmo base, recortada para mostrar únicamente el panel principal y evitar datos personales. Hasta que se cargue ese archivo, el sitio mostrará un aviso explícito en el área correspondiente.
