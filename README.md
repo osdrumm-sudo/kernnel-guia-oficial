@@ -5,36 +5,31 @@ Créditos de la aplicación: OSS/26.
 
 ## Contenido — Kernnel 2.0
 - Página principal con identificación de la plataforma y acceso a la aplicación.
-- Manual de nueve módulos, con procedimientos y especificaciones verificadas sobre el código de Kernnel.
+- Manual de usuario con procedimientos y especificaciones basados en el código de Kernnel.
 - Buscador de módulos, navegación por secciones, procedimientos guiados, instalación y preguntas frecuentes.
 - Diseño adaptable a dispositivos móviles y escritorio, sin librerías ni servicios de terceros.
 - Idioma inicial: español de Chile (es-CL); arquitectura preparada para una localización futura.
 
 ## Publicación
 En Settings → Pages, seleccionar Deploy from a branch, rama main, directorio /(root).
-Dirección pública prevista tras la migración (NO ACTIVADA): https://manual.kernnel.app/
+El archivo `CNAME` declara `manual.kernnel.app` como dominio del manual.
 
-Repositorio independiente de la aplicación principal, con dirección prevista tras la migración:
-https://kernnel.app/
-
-Origen actual de la app hasta completar la migración: https://osdrumm-sudo.github.io/kernnel-estudio-musical/
+La aplicación principal vive en el repositorio independiente `kernnel-estudio-musical`. Los enlaces del manual apuntan a `https://kernnel.app/`.
 
 ## Captura auténtica de demostración
-La página requiere el archivo kernnel-ejemplo.jpg en la raíz del repositorio. Es una captura auténtica de Kernnel con el título Ejemplo · Ritmo base, recortada para mostrar únicamente el panel principal y evitar datos personales. Hasta que se cargue ese archivo, el sitio mostrará un aviso explícito en el área correspondiente.
-
-Esta imagen corresponde a una versión de demostración anterior; los controles y su distribución pueden variar entre versiones. Actualizar las ilustraciones cuando se modifique la interfaz.
+La página muestra `kernnel-interfaz-oscura.jpg`, una captura de una versión anterior con datos de demostración. El pie de foto identifica su versión y dirige al lector a los pasos actualizados.
 
 ## Archivos
 - index.html — contenido estructurado y semántico.
 - styles.css — identidad gráfica oscura y diseño adaptable.
 - guide.js — búsqueda local de módulos y navegación.
-- kernnel-ejemplo.jpg — captura de demostración anterior a Kernnel 2.0, identificada como tal en el manual.
+- kernnel-interfaz-oscura.jpg — captura de demostración incluida en el manual.
 
 ## Internacionalización futura
 Se utilizarán códigos BCP 47, inicialmente es-CL y posteriormente en-US. Los textos deberán externalizarse a archivos de idioma antes de incorporar el selector. La versión actual está exclusivamente en español y no incluye un selector de idioma simulado.
 
 ## Precisión funcional
-La documentación distingue la representación gráfica de pulsos de una partitura convencional y especifica que Firebase realiza respaldos manuales, no sincronización automática. La recuperación puede reemplazar la biblioteca local.
+La documentación explica la representación gráfica de pulsos y la sincronización automática de canciones y repertorios mediante Google. El historial recupera versiones como copias adicionales. La importación JSON ofrece sus propias opciones de combinación y reemplazo.
 
 Este proyecto no debe modificar el repositorio ni el almacenamiento de la aplicación principal.
 
