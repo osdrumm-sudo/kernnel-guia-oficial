@@ -45,3 +45,10 @@ Este proyecto no debe modificar el repositorio ni el almacenamiento de la aplica
 - Enlaces al historial de cambios del código oficial, pruebas y actualizaciones de accesibilidad.
 - Se mantiene la separación entre funcionalidades existentes y prototipos congelados: el manual no anuncia como disponibles las salas, métricas variables o instrumentos multi-capa.
 - Estos cambios son exclusivamente de documentación y no modifican la aplicación ni los datos de Firebase.
+
+## Actualización del 23 de noviembre de 2026 — repertorios y acentos
+- Crear repertorios desde Inicio; menú vertical desplegado solo en Inicio, contraído por defecto en Edición/Estudio.
+- Acceso superior «Repertorios» y confirmación de guardado al salir de Edición.
+- Eliminar canciones desde las tarjetas; recuperación desde papelera con vínculos originales.
+- Acentos configurables por pulso del metrónomo y por canción.
+- Evaluación futura del reproductor de música personal (issue #15); **no implementado**.
