@@ -60,18 +60,18 @@
     <section class="section" id="novedades" aria-labelledby="novedades-title">
       <div class="section-number">ACTUALIZACIÓN · 23 DE NOVIEMBRE DE 2026</div>
       <h2 id="novedades-title">Novedades de Kernnel / Metriqa</h2>
-      <p>La versión oficial incorpora mejoras de navegación, cuentas Google autorizadas, sincronización de repertorios y mantenimiento de la interfaz. Esta guía describe las funciones actuales, no los prototipos en estudio.</p>
+      <p>La versión oficial incorpora creación y selección de repertorios, acentos configurables del clic, mejoras de navegación, acceso con Google y sincronización de repertorios. Esta guía describe las funciones actuales, no los prototipos en estudio.</p>
       <div class="feature-grid">
         <article class="feature"><span class="feature-icon">01</span><h3>Acceso y sincronización</h3><p>Inicio con Google autorizado, sincronización incremental de canciones y repertorios e historial de versiones.</p><a href="#google">Consultar sincronización →</a></article>
-        <article class="feature"><span class="feature-icon">02</span><h3>Práctica y organización</h3><p>Inicio, Edición y Estudio mejorados; reproducción, loop, secciones y anotaciones gráficas.</p><a href="#navegacion">Consultar navegación →</a></article>
+        <article class="feature"><span class="feature-icon">02</span><h3>Práctica y organización</h3><p>Crear repertorios en Inicio, seleccionar repertorios desde Edición y Estudio, guardar al salir, eliminar canciones con recuperación, loops y anotaciones.</p><a href="#navegacion">Consultar navegación →</a></article>
         <article class="feature"><span class="feature-icon">03</span><h3>Legibilidad</h3><p>Colores diferenciados por módulo, temas claro y oscuro y alternativa de alto contraste.</p><a href="#manual">Consultar manual →</a></article>
-        <article class="feature"><span class="feature-icon">04</span><h3>Pruebas y continuidad</h3><p>Pruebas automáticas de sintaxis, acceso, sincronización y respaldos; las verificaciones con Firebase real y dispositivos siguen siendo necesarias.</p><a href="https://github.com/osdrumm-sudo/kernnel-estudio-musical/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">Historial oficial →</a></article>
+        <article class="feature"><span class="feature-icon">04</span><h3>Pruebas y continuidad</h3><p>41 pruebas automáticas de sintaxis, acceso, sincronización, respaldos, navegación y acentos; falta la validación real con Firebase y dispositivos.</p><a href="https://github.com/osdrumm-sudo/kernnel-estudio-musical/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">Historial oficial →</a></article>
       </div>
     </section>
     <section class="section" id="introduccion" aria-labelledby="intro-title">
       <div class="section-number">01 / INTERFAZ</div>
       <h2 id="intro-title">Entorno de trabajo</h2>
-      <p>Kernnel 2.0 se abre en <b>Inicio</b> con los repertorios contraídos. Despliegue uno y pulse <b>Estudiar</b> o <b>Editar</b> junto al tema. También puede usar <b>Estudio</b> o <b>Edición</b> en la barra superior para elegir un tema de la biblioteca completa. En Estudio, las herramientas se ocultan inicialmente para dejar más espacio a la partitura.</p>
+      <p>Kernnel abre en <b>Inicio</b> con el menú lateral desplegado y los repertorios inicialmente contraídos. Despliegue uno y pulse <b>Estudiar</b>, <b>Editar</b> o <b>Eliminar</b> junto al tema. También puede usar <b>Estudio</b> o <b>Edición</b> en la barra superior para elegir un tema de la biblioteca completa. En Edición y Estudio las herramientas comienzan contraídas; puede abrirlas con el control superior. En ambos modos, <b>Repertorios</b> muestra una ventana para escoger un grupo y regresar a Inicio.</p>
       <figure class="screenshot-frame">
         <div class="screenshot-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>VISTA DE LA PLATAFORMA · DATOS DE DEMOSTRACIÓN</span></div>
         <img src="./kernnel-interfaz-oscura.jpg" alt="Captura real de Inicio en modo oscuro: repertorios de demostración, navegación y controles de apariencia." loading="eager" id="platform-shot">
@@ -116,11 +116,11 @@
         <details class="manual-item" id="biblioteca" data-search="biblioteca repertorios buscar canción filtrar crear repertorio ordenar gestionar canciones">
           <summary><span class="manual-index">03</span><span><strong>Biblioteca y repertorios</strong><small>Localización y organización de canciones</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
           <div class="manual-body">
-            <p>En Inicio, las tarjetas permiten recorrer repertorios y abrir cada tema con <b>Estudiar</b> o <b>Editar</b>. Para buscar, filtrar u organizar canciones, abra <b>Herramientas e instrucciones</b> y despliegue <b>Biblioteca y repertorios</b>.</p>
+            <p>En Inicio, las tarjetas permiten recorrer repertorios y gestionar cada canción con <b>Estudiar</b>, <b>Editar</b> o <b>Eliminar</b>. El nuevo formulario <b>Crear repertorio</b> se encuentra directamente en Inicio. El panel vertical de herramientas está desplegado aquí; para buscar o filtrar canciones abra su módulo <b>Biblioteca y repertorios</b>.</p>
             <ol>
               <li>Use <b>Buscar canción</b> para localizar un título o <b>Mostrar repertorio</b> para limitar los resultados.</li>
               <li>Seleccione una canción en la lista de la biblioteca para abrirla en Edición.</li>
-              <li>Use la sección <b>Repertorios</b> del mismo panel para crear, ordenar o gestionar las listas.</li>
+              <li>Para crear un repertorio vacío, escriba el nombre en <b>Crear repertorio</b> en Inicio y pulse el botón correspondiente.</li><li>En Edición y Estudio, pulse <b>Repertorios</b> en la parte superior y elija un grupo; regresará a Inicio con ese grupo desplegado.</li><li>Para quitar una canción de toda la biblioteca, pulse <b>Eliminar</b> y confirme. Se enviará a la papelera; al restaurarla se recuperarán los vínculos a los repertorios que aún existan.</li>
             </ol>
             <p class="technical">Una canción puede pertenecer a varios repertorios sin duplicarse. Sus cambios se reflejan en todos los que la contienen. Eliminar un repertorio conserva sus canciones.</p>
           </div>
@@ -135,7 +135,7 @@
               <li>Pulse una nota para abrir la anotación del pulso. Añada un <b>Comentario</b>, un <b>Color del pulso</b> o una <b>Imagen adjunta</b> de hasta 4 MB y pulse <b>Guardar</b> en el cuadro.</li>
               <li>En la cabecera de Edición, <b>Guardar</b> fija un punto de retorno para el tema. <b>Cancelar</b> restaura ese punto o, si aún no ha pulsado Guardar, el estado al entrar en Edición. Puede seguir editando después de cancelar.</li>
             </ol>
-            <p>El guardado automático continúa durante la edición. El punto de retorno pertenece a esa sesión y se renueva al volver a entrar o si la sincronización actualiza el tema. <b>Salir</b> vuelve al repertorio.</p>
+            <p>El guardado automático continúa durante la edición. El punto de retorno pertenece a esa sesión y se renueva al volver a entrar o si la sincronización actualiza el tema. Al salir de Edición, al cambiar a otro modo o elegir un repertorio, aparece una confirmación: <b>Guardar y salir</b>, <b>Salir sin guardar</b> (restaura el punto de retorno) o <b>Cancelar</b>.</p>
             <h3>Leer anotaciones en Estudio</h3>
             <p>La partitura de Estudio es de solo lectura. Pase el cursor, enfoque con el teclado o toque una nota anotada o el botón <b>Nota</b> del compás para leer el comentario en una ventana emergente. Al pausar sobre una anotación también puede leerla. En pantallas táctiles, los comentarios aparecen automáticamente al llegar al compás o pulso correspondiente.</p>
             <p>Pulse una nota con imagen para abrir una ventana ampliada con la imagen y el comentario, si lo hay. Puede abrir una imagen aunque la nota carezca de texto. Pulse fuera de la ventana o presione <b>Esc</b> para cerrarla.</p>
@@ -143,17 +143,17 @@
             <p class="technical">La partitura representa la estructura y los pulsos. Si el tema necesita notación adicional, adjunte un fragmento de la partitura original como imagen. Los compases eliminados se pueden recuperar desde la papelera.</p>
           </div>
         </details>
-        <details class="manual-item" id="metronomo" data-search="metrónomo audio reproducir detener pausa reanudar bpm original actual práctica métrica tempo ritmo volumen sonido clic preparación ir a compás siguiente anterior">
+        <details class="manual-item" id="metronomo" data-search="metrónomo audio reproducir detener pausa reanudar bpm original actual práctica métrica tempo ritmo volumen sonido clic acento acentuar pulsos preparación ir a compás siguiente anterior">
           <summary><span class="manual-index">05</span><span><strong>Metrónomo y audio</strong><small>Configuración y ejecución de pulsaciones</small></span><span class="chevron" aria-hidden="true">⌄</span></summary>
           <div class="manual-body">
             <ol>
-              <li>En Estudio, pulse <b>Ajustes</b> y abra <b>Metrónomo y audio</b> para ajustar el tempo de práctica, el <b>Volumen independiente</b> y los <b>Compases de preparación</b> (0, 1, 2 o 4). Elija <b>Clic clásico</b>, <b>Percusión</b> o <b>Solo visual (silencio)</b>.</li>
+              <li>En Estudio, pulse <b>Ajustes</b> y abra <b>Metrónomo y audio</b> para ajustar el tempo de práctica, el <b>Volumen independiente</b> y los <b>Compases de preparación</b> (0, 1, 2 o 4). Elija <b>Clic clásico</b>, <b>Percusión</b> o <b>Solo visual (silencio)</b>.</li><li>En <b>Acentos del clic</b>, pulse los números de pulso que desea destacar. Puede marcar varios o ninguno y restablecer solo el primer pulso; el ajuste se conserva por canción.</li>
               <li>La barra muestra el <b>BPM original</b> junto a la métrica y el <b>BPM actual</b>. Use <b>−</b> o <b>+</b> para ajustar el BPM actual, incluso mientras se reproduce. El BPM original se edita en <b>Canción y compases</b>.</li>
               <li>Pulse <b>Reproducir</b>. La primera pulsación activa el metrónomo y, si corresponde, comienza con la cuenta previa. Use <b>Pausar</b>, <b>Reanudar</b> o <b>Detener</b>.</li>
               <li>Para localizar un punto de la partitura, pulse <b>Ir a compás</b>, ingrese el <b>Número de compás</b> y confirme con <b>Ir al compás</b>. Esto detiene la reproducción y destaca el compás elegido. Para cambiar el tramo que se reproduce, ajuste el intervalo de práctica.</li>
             </ol>
             <p>Los botones de compás anterior y siguiente están en Edición. En Estudio, use <b>Ir a compás</b>.</p>
-            <p class="technical">El tempo de práctica admite de 30 a 300 BPM. En 6/8, 9/8 y 12/8, el metrónomo pulsa por corchea y acentúa el primer pulso de cada compás.</p>
+            <p class="technical">El tempo de práctica admite de 30 a 300 BPM. En 6/8, 9/8 y 12/8, el metrónomo pulsa por corchea; los acentos son configurables. Las canciones antiguas mantienen por defecto acentuado el primer pulso.</p>
           </div>
         </details>
         <details class="manual-item" id="practica" data-search="práctica sesiones desde hasta compás intervalo loop bucle repetir repetición desactivar cruz canción completa zoom desplazamiento marcadores difíciles">
