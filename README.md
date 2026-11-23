@@ -39,3 +39,9 @@ Este proyecto no debe modificar el repositorio ni el almacenamiento de la aplica
 - Paneles laterales de apertura exclusiva y preguntas frecuentes de la nueva interfaz.
 - Búsqueda en contenido de módulos cerrados y corrección del inicio sin ancla URL.
 - Verificado: nueve módulos, enlaces internos, IDs únicos, sintaxis JS y búsqueda de acento, fusiona, repertorios y navegación. Pendiente: revisión visual de la guía en dispositivos reales.
+
+## Actualización del 23 de noviembre de 2026
+- Sección visible «Novedades de Kernnel / Metriqa» con enlaces a las funciones documentadas.
+- Enlaces al historial de cambios del código oficial, pruebas y actualizaciones de accesibilidad.
+- Se mantiene la separación entre funcionalidades existentes y prototipos congelados: el manual no anuncia como disponibles las salas, métricas variables o instrumentos multi-capa.
+- Estos cambios son exclusivamente de documentación y no modifican la aplicación ni los datos de Firebase.
